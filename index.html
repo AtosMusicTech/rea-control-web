@@ -126,12 +126,10 @@
         }
 
         function stopProject() {
-            for (let i = 0; i < 5; i++) {
-                socket.send(JSON.stringify({
-                    action: 'project:stop',
-                    args: [i + 1]
-                }));
-            }
+            socket.send(JSON.stringify({
+                action: 'projects:stop',
+                args: []
+            }));
         }
 
         function sendCommand() {
